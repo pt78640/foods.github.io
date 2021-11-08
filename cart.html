@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container{
+           
+            width:90%;
+            margin:auto;
+        }
+        img{
+            width:400px;
+            height:350px;
+        }
+        button{
+            background-color: blue;
+            color: white;
+            border-radius: 10px;
+            height:34px;
+            width:150px
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="img">
+        <h2 id="heading"></h2>
+        <p id="para"></p>
+        <button id="place" onclick="order()">place order</button>
+    </div>
+</body>
+<script>
+    var description=JSON.parse(localStorage.getItem("food"));
+    var img=document.getElementById("img")
+    img.src=description.strMealThumb;
+    var heading=document.getElementById("heading");
+    heading.textContent=description.strMeal;
+    var par=document.getElementById("para");
+    p.textContent=description.price;
+    function order(){
+        setTimeout(()=>{
+            alert("Your order is placed")
+        },0);
+        setTimeout(()=>{
+            alert("Your order is accepted ")
+        },3000);
+        setTimeout(()=>{
+            alert("Your order is being cooked")
+        },8000);
+        setTimeout(()=>{
+            alert("Your order is ready")
+        },10000);
+        setTimeout(()=>{
+            alert("order out for delivery")
+        },12000);
+        setTimeout(()=>{
+            alert(" order delivered")
+        },25000);
+    }
+</script>
+</html>
